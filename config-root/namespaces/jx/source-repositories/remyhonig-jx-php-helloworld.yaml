@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: remyhonig
+    provider: github
+    repository: jx-php-helloworld
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: remyhonig-jx-php-helloworld
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/remyhonig/jx-php-helloworld.git
+  org: remyhonig
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx-php-helloworld
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/remyhonig/jx-php-helloworld

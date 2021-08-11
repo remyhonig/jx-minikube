@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         remyhonig/jx-minikube: true
+        remyhonig/jx-php-helloworld: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         remyhonig/jx-minikube: merge
+        remyhonig/jx-php-helloworld: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - remyhonig/jx-minikube
+        - remyhonig/jx-php-helloworld
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - remyhonig/jx-minikube
+        - remyhonig/jx-php-helloworld
       target_url: http://lighthouse-jx.192.168.39.43.nip.io/merge/status
 kind: ConfigMap
 metadata:
