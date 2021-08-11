@@ -9,9 +9,14 @@ repositories:
   url: https://charts.helm.sh/stable
 - name: jxgh
   url: https://jenkins-x-charts.github.io/repo
+- name: jx3
+  url: https://storage.googleapis.com/jenkinsxio/charts
 releases:
 - chart: jx3/lighthouse-webui-plugin
   name: lighthouse-webui-plugin
+  values:
+  - ../../versionStream/charts/jx3/lighthouse-webui-plugin/values.yaml.gotmpl
+  - jx-values.yaml
 - chart: jxgh/jxboot-helmfile-resources
   version: 1.0.71
   name: jxboot-helmfile-resources
